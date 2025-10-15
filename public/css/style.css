@@ -1,0 +1,229 @@
+body{
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+}
+
+.container{
+    flex:1;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    max-width: 80% !important;
+}
+.navbar{
+    height: 6rem;
+    background-color: white;
+}
+.brand-text{
+    color: brown;
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+.nav-link{
+    font-family: Arial, Helvetica, sans-serif !important;
+    color: #222222 !important;
+    font-size: 1.3rem !important;
+}
+.fa-worm{
+    color: brown;
+    font-size: 2rem;
+}
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+footer {
+  width: 100%;
+}
+
+.f-info {
+  text-align: center;
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* correct usage */
+  align-items: center;           /* vertically center */
+}
+
+.f-info-socials,
+.f-info-links,
+.f-info-brand {
+    flex: 1; /* each takes equal space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 2rem;
+}
+.listing-card{
+    border:none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding:0 !important;
+}
+.card-text p{
+    font-weight: 400!important;
+}
+.listing-link{
+    text-decoration: none;
+}
+.card-img-overlay{
+    opacity:0;
+
+}
+.card-img-overlay:hover{
+    opacity:0.2;
+    background-color: white;
+}
+
+.add-btn,.edit-btn{
+    background-color: brown !important;
+    border: none !important;
+}
+.btns{
+    display: flex;
+}
+.show-card{
+   padding-left: 0;
+   padding-right: 0;
+}
+.btn-outline-brown {
+    color: brown!important;
+    border-color: brown !important;
+}
+
+.btn-outline-brown:hover {
+    color: white !important;
+    background-color: brown !important;
+    border-color: brown !important;
+}
+  .star {
+    font-size: 50px;
+    cursor: pointer;
+    color: gray;   /* default color */
+    transition: color 0.2s;
+  }
+  .star.selected {
+    color: gold;   /* highlighted stars */
+  }
+  .strie{
+    font-size: 30px;
+    color: gold;
+  }
+
+  .custom-marker {
+  width: 40px;
+  height: 40px;
+  background-image: url('/images/logo3.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.tax-info{
+    display: none;
+}
+.tax-toggle{
+    background-color: brown;
+    color: white;
+    border: 2px solid brown;
+    border-radius: 1rem;
+    height: 3.25rem;
+    padding: 1rem;
+    margin-left: 4rem;
+    display: flex;
+    align-items: center;
+}
+.btn-search {
+    background-color: brown !important;
+    color: white !important;
+    border-radius: 1.2rem !important;
+    padding: 0 1rem 0 1rem !important;
+}
+.btn-search i{
+    display: inline;
+    margin-right: 0.5rem;
+}
+.search-inp{
+    border-radius: 25px !important;
+    padding: 0.5rem 2rem 0.5rem 3.5rem !important;
+}
+
+.dropdown-toggle{
+    border-radius: 1rem !important;
+    padding:0.5rem 1rem !important;  
+}
+.dropdown-item.active {
+  background-color: brown;
+  color: white !important;
+}
+
+
+.host{
+    margin-right: 1.5rem;
+    margin-left: 1rem;
+}
+/* Filters container */
+#filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Each filter */
+.filter {
+  text-align: center;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* Force links inside filters to inherit color and remove underline */
+.filter a {
+  color: inherit !important;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+/* Default icon color */
+.filter i {
+  color: #444;
+  transition: color 0.2s, transform 0.2s;
+}
+
+/* Hover effect for non-active filters */
+.filter:not(.active):hover i {
+  color: brown;
+  transform: scale(1.1);
+}
+
+/* Active filter */
+.filter.active i {
+  color: brown !important;    /* stays brown */
+  transform: scale(1.15);
+}
+
+/* Optional: lift active filter */
+.filter.active {
+  opacity: 1 !important;
+  transform: translateY(-2px);
+}
+

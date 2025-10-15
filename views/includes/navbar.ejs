@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <!-- Left: Brand & Explore -->
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand" href="/listings">
+        <i class="fa-solid fa-worm fa-2xl"></i>
+        <span class="brand-text"><b>Wanderbnb</b></span>
+      </a>
+      <a class="nav-link" href="/listings">Explore</a>
+    </div>
+
+    <!-- Center: Search -->
+    <div class="mx-auto">
+      <form class="d-flex" role="search" method="GET" action="/listings/filter">
+        <input class="form-control me-2 search-inp" type="search" placeholder="Search destinations" name="iconType" list="iconTypes">
+        <datalist id="iconTypes">
+          <option value="Trending">
+          <option value="Rooms">
+          <option value="Iconic cities">
+          <option value="Mountains">
+          <option value="Castle">
+          <option value="Amazing pools">
+          <option value="Camping">
+          <option value="Farms">
+          <option value="Beach">
+          <option value="Desert">
+          <option value="Lake">
+          <option value="Dome">
+          <option value="Nightlife">
+        </datalist>
+        <button class="btn btn-search" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>Search
+        </button>
+      </form>
+    </div>
+
+  
+    <div class="d-flex align-items-center">
+      
+      <div class="dropdown me-3">
+        <button class="btn btn-dark add-btn dropdown-toggle" type="button" id="countryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-solid fa-globe"></i>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="countryDropdown" style="max-height: 250px; overflow-y: auto;">
+          <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/w20/in.png" alt=""> India</a></li>
+          <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/w20/us.png" alt=""> USA</a></li>
+          <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/w20/gb.png" alt=""> UK</a></li>
+          <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/w20/fr.png" alt=""> France</a></li>
+          <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/w20/it.png" alt=""> Italy</a></li>
+          <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/w20/jp.png" alt=""> Japan</a></li>
+          <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/w20/au.png" alt=""> Australia</a></li>
+          <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/w20/ca.png" alt=""> Canada</a></li>
+          <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/w20/nz.png" alt=""> New Zealand</a></li>
+          <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/w20/ae.png" alt=""> UAE</a></li>
+        </ul>
+      </div>
+
+      <!-- Become a host -->
+      <a class="nav-link host me-3" href="/listings/new">Become a host</a>
+
+      <!-- Auth links -->
+      <% if(currUser){ %>
+        <a class="nav-link" href="/logout">Logout</a>
+      <% } else { %>
+        <a class="nav-link me-2" href="/signup"><b>SignUp</b></a>
+        <a class="nav-link" href="/login"><b>Login</b></a>
+      <% } %>
+    </div>
+  </div>
+</nav>
+
+
+

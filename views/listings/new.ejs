@@ -1,0 +1,83 @@
+<%layout("/layouts/boilerplate")%>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <br><br>
+    <h2>Create new Listing</h2>
+    <form action="/listings" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+        <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" placeholder="So, what it is called?" name="listing[title]" class="form-control" required>
+        <div class="valid-feedback">
+            Title looks dope!
+        </div>
+        </div>
+
+        <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea name="listing[description]" placeholder="enter description" class="form-control" required></textarea>
+        <div class="invalid-feedback">
+            Please enter a short description!
+        </div>
+        </div>
+
+        <div class="mb-3">
+        <label for="image" class="form-label">Upload Image</label>
+        <input type="file"  name="listing[image]" class="form-control" required>
+        </div>
+
+        <div class="row">
+        <div class="mb-3 col-4">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" placeholder="1700" name="listing[price]" class="form-control" required>
+        <div class="invalid-feedback">
+            Please enter a valid price!
+        </div>
+        </div>
+
+        <div class="mb-3 col-8">
+        <label for="country" class="form-label">Country</label>
+        <input type="text" placeholder="India" name="listing[country]" class="form-control" required>
+        <div class="invalid-feedback">
+            Please enter country name!
+        </div>
+        </div>
+        </div>
+
+        <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" placeholder="Jaipur,Rajasthan" name="listing[location]" class="form-control" required>
+        <div class="invalid-feedback">
+            Please enter location!
+        </div>
+        </div>
+        <br><br>
+
+        <div class="mb-3">
+          <label for="iconType" class="form-label">Category / Icon Type</label>
+          <select name="listing[iconType]" id="iconType" class="form-select" required>
+            <option value="Mountains">Mountains</option>
+            <option value="Desert">Desert</option>
+            <option value="Beach">Beach</option>
+            <option value="Lake">Lake</option>
+            <option value="Dome">Dome</option>
+            <option value="Castle">Castle</option>
+            <option value="Farms">Farms</option>
+            <option value="Nightlife">Nightlife</option>
+            <option value="Rooms">Rooms</option>
+            <option value="Camping">Camping</option>
+            <option value="Iconic cities">Iconic cities</option>
+            <option value="Amazing pools">Amazing pools</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a category!
+          </div>
+        </div>
+
+
+        <button class="btn btn-dark add-btn">Add</button><br>
+    </form>
+    </div>
+    </div>
+    <br><br>
+</body>
