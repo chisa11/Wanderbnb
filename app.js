@@ -79,6 +79,9 @@ app.use((req,res,next)=>{
     next();
 });
 
+app.get('/', (req, res) => {
+  res.redirect('/listings');
+});
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
 app.use("/",userRouter);
@@ -92,6 +95,8 @@ app.use((err,req,res,next)=>{
     res.status(statuscode);
     res.render("listings/error.ejs",{message});
 });
-app.listen(8080,()=>{
-    console.log("app is listning on port 8080");
+
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`app is listening on port ${PORT}`);
 });
